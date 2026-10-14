@@ -1,49 +1,90 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Menu - Delicious Eats</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="header">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="site-header" role="banner">
         <h1>Our Menu</h1>
-        <img src="images/logo.jpg" height="200">
-    </div>
-    <div id="nav">
-        <a href="index.html">Home</a> |
-        <a href="menu.html">Menu</a> |
-        <a href="#">Contact</a>
-    </div>
-    <div id="content">
-        <table border="0">
-            <tr>
-                <td>
-                    <h3>Appetizers</h3>
-                    <p>Delicious starters to begin your meal.</p>
-                    <img src="images/dish1.jpg" width="400">
-                </td>
-                <td>
-                    <h3>Main Courses</h3>
-                    <p>Satisfying entrees to delight your palate.</p>
-                    <img src="images/dish2.jpg" width="400">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <h3>Desserts</h3>
-                    <p>Sweet treats to finish your dining experience.</p>
-                    <img src="images/dish3.jpg" width="400">
-                </td>
-                <td>
-                    <h3>Beverages</h3>
-                    <p>A selection of drinks to complement your meal.</p>
-                    <img src="images/dish4.jpg" width="400">
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div id="footer">
+        <img src="images/logo-1x.jpg"
+             srcset="images/logo-1x.jpg 1x,
+                     images/logo-2x.jpg 2x"
+             width="200" height="200"
+             alt="Delicious Eats">
+    </header>
+
+    <nav class="site-nav" role="navigation" aria-label="Main">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html" aria-current="page">Menu</a></li>
+        </ul>
+    </nav>
+
+    <main id="main-content" role="main" tabindex="-1">
+        <section aria-labelledby="appetizers-heading">
+            <h2 id="appetizers-heading">Appetizers</h2>
+            <p>Delicious starters to begin your meal.</p>
+            <img src="images/dish1-800.jpg"
+                 srcset="images/dish1-400.jpg 400w,
+                         images/dish1-800.jpg 800w,
+                         images/dish1-1200.jpg 1200w"
+                 sizes="(min-width: 850px) 385px, calc(100vw - 30px)"
+                 width="800" height="800"
+                 alt="Guacamole with tortilla chips, with a cheeseburger in the background"
+                 loading="lazy"
+                 decoding="async">
+        </section>
+
+        <section aria-labelledby="mains-heading">
+            <h2 id="mains-heading">Main Courses</h2>
+            <p>Satisfying entrees to delight your palate.</p>
+            <img src="images/dish2-800.jpg"
+                 srcset="images/dish2-400.jpg 400w,
+                         images/dish2-800.jpg 800w,
+                         images/dish2-1200.jpg 1200w"
+                 sizes="(min-width: 850px) 385px, calc(100vw - 30px)"
+                 width="800" height="800"
+                 alt="Cheeseburger served with sweet potato fries and coleslaw"
+                 loading="lazy"
+                 decoding="async">
+        </section>
+
+        <section aria-labelledby="desserts-heading">
+            <h2 id="desserts-heading">Desserts</h2>
+            <p>Sweet treats to finish your dining experience.</p>
+            <img src="images/dish3-800.jpg"
+                 srcset="images/dish3-400.jpg 400w,
+                         images/dish3-800.jpg 800w,
+                         images/dish3-1200.jpg 1200w"
+                 sizes="(min-width: 850px) 385px, calc(100vw - 30px)"
+                 width="800" height="800"
+                 alt="A slice of key lime pie topped with whipped cream"
+                 loading="lazy"
+                 decoding="async">
+        </section>
+
+        <section aria-labelledby="beverages-heading">
+            <h2 id="beverages-heading">Beverages</h2>
+            <p>A selection of drinks to complement your meal.</p>
+            <img src="images/dish4-800.jpg"
+                 srcset="images/dish4-400.jpg 400w,
+                         images/dish4-800.jpg 800w,
+                         images/dish4-1200.jpg 1200w"
+                 sizes="(min-width: 850px) 385px, calc(100vw - 30px)"
+                 width="800" height="800"
+                 alt="A vanilla milkshake with whipped cream and a striped straw"
+                 loading="lazy"
+                 decoding="async">
+        </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
         <p>&copy; 2023 Delicious Eats</p>
-    </div>
+    </footer>
 </body>
 </html>
