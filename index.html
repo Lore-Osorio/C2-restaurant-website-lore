@@ -1,81 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delicious Eats Restaurant</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <style>
-        body {
-            background-color: #ffffff;
-            font-family: Arial, sans-serif;
-        }
-        #header {
-            background-color: #333333;
-            color: #000000;
-            text-align: center;
-            padding: 50px;
-        }
-        #nav {
-            background-color: #444444;
-            color: #ffffff;
-            text-align: center;
-            padding: 10px;
-        }
-        #nav a {
-            color: #ffffff;
-            margin: 0 15px;
-            text-decoration: none;
-        }
-        #content {
-            width: 800px;
-            margin: 0 auto;
-        }
-        .left {
-            float: left;
-            width: 400px;
-        }
-        .right {
-            float: right;
-            width: 400px;
-        }
-        #footer {
-            clear: both;
-            background-color: #333333;
-            color: #000000;
-            text-align: center;
-            padding: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="header">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="site-header" role="banner">
         <h1>Welcome to Delicious Eats</h1>
-        <img src="images/logo.jpg" height= "200">
-    </div>
-    <div id="nav">
-        <a href="index.html">Home</a> |
-        <a href="menu.html">Menu</a> |
-        <a href="#">Contact</a>
-    </div>
-    <div id="content">
-        <div class="left">
-            <h2>About Us</h2>
+        <img src="images/logo.jpg"
+             srcset="images/logo-1x.jpg 1x,
+                     images/logo-2x.jpg 2x"
+             alt="Delicious Eats">
+    </header>
+
+    <nav class="site-nav" role="navigation" aria-label="Main">
+        <ul>
+            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main id="main-content" role="main" tabindex="-1">
+        <section aria-labelledby="about-heading">
+            <h2 id="about-heading">About Us</h2>
             <p>A Queen Anne neighborhood fixture since 1962, Delicious Eats Diner serves classic American comfort food with a modern twist. Our vintage chrome and vinyl booths set the scene for innovative dishes that honor traditional diner culture while embracing contemporary flavors.</p>
-            <p>Under Chef Kai's leadership, we craft beloved classics using locally sourced, seasonal ingredients from our Pacific Northwest neighbors. From our signature cheeseburger to house-made clam chowder, each dish balances comfort with quality. Our menu features both traditional favorites and creative plant-based options, ensuring there's something for everyone.<p>
+            <p>Under Chef Kai's leadership, we craft beloved classics using locally sourced, seasonal ingredients from our Pacific Northwest neighbors. From our signature cheeseburger to house-made clam chowder, each dish balances comfort with quality. Our menu features both traditional favorites and creative plant-based options, ensuring there's something for everyone.</p>
             <p>More than just a restaurant, we're a community gathering place where good food meets warm hospitality. Stop by for a vanilla milkshake, bring friends for dinner, or treat yourself to a slice of our famous key lime pie – there's always a seat waiting for you at Delicious Eats.</p>
 
-            <img src="images/dining_room.jpg" width = "390">
-        </div>
-        <div class="right">
-            <h2>Our Hours</h2>
-            <p>Monday - Friday: 9am - 9pm<br />Saturday - Sunday: 10am - 10pm</p>
-            <hr />
+            <img src="images/dining_room-800.jpg"
+                 srcset="images/dining_room-400.jpg 400w,
+                         images/dining_room-800.jpg 800w,
+                         images/dining_room-1200.jpg 1200w"
+                 sizes="(min-width: 850px) 385px, calc(100vw - 30px)"
+                 alt="The Delicious Eats dining room with vintage chrome details and vinyl booths"
+                 loading="lazy"
+                 decoding="async">
+        </section>
+
+        <section aria-labelledby="hours-heading">
+            <h2 id="hours-heading">Our Hours</h2>
+            <p>Monday - Friday: 9am - 9pm<br>Saturday - Sunday: 10am - 10pm</p>
+            <hr>
             <p>We invite you to become part of our story. Join us at Delicious Eats Diner, where yesterday's charm meets today's flavors in every bite.</p>
 
-            <img src="images/chef.png" width = "390">
-        </div>
-    </div>
-    <div id="footer">
+            <img src="images/chef-800.jpg"
+                 srcset="images/chef-400.jpg 400w,
+                         images/chef-800.jpg 800w,
+                         images/chef-1200.jpg 1200w"
+                 sizes="(min-width: 850px) 385px, calc(100vw - 30px)"
+                 alt="Chef Kai, head chef at Delicious Eats"
+                 loading="lazy"
+                 decoding="async">
+        </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
         <p>&copy; 2023 Delicious Eats</p>
-    </div>
+    </footer>
 </body>
 </html>
