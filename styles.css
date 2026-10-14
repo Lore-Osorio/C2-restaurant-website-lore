@@ -1,20 +1,21 @@
+
 :root {
-    /* Colores */
+    /* Colors */
     --color-bg: #ffffff;
     --color-text: #222222;          
-    --color-dark: #333333;          
+    --color-dark: #333333;         
     --color-nav: #444444;          
     --color-light-text: #ffffff;    
     --color-focus-dark: #ffbf47;    
-    --color-focus-light: #1a4fa0;   
+    --color-focus-light: #1a4fa0;  
 
-
+ 
     --font-base: Arial, sans-serif;
     --line-height-base: 1.5;
 
-
     --content-max-width: 800px;
 }
+
 
 *,
 *::before,
@@ -89,6 +90,7 @@ main:focus {
     margin: 0 auto;
 }
 
+
 .site-nav {
     padding: 10px;
     background-color: var(--color-nav);
@@ -121,6 +123,7 @@ main:focus {
     text-decoration: underline;
 }
 
+
 main {
     display: grid;
     grid-template-columns: 1fr;
@@ -131,13 +134,13 @@ main {
 }
 
 
+
 .site-footer {
     padding: 20px;
     background-color: var(--color-dark);
     color: var(--color-light-text);
     text-align: center;
 }
-
 
 @media (min-width: 600px) {
     .site-header {
@@ -155,14 +158,12 @@ main {
         gap: 4px;
     }
 
-
     .site-nav li + li::before {
         content: "|";
         margin-right: 4px;
         color: var(--color-light-text);
     }
 }
-
 
 @media (min-width: 850px) {
     .site-header {
